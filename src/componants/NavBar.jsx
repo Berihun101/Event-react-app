@@ -3,7 +3,10 @@ import { Button, Container, Image, Menu } from "semantic-ui-react"
 
 
 
-export default function NavBar(){
+export default function NavBar({setFormOpen}){
+    function clickHandler(){
+        setFormOpen(true)
+    }
     return(
         <Menu fixed="top" inverted  >
             <Container>
@@ -12,7 +15,7 @@ export default function NavBar(){
                 </Menu>
                 <Menu.Item name="Event" />
                 <Menu.Item>
-                    <Button inverted color="blue">New event</Button>
+                    <Button onClick={clickHandler} inverted color="blue">New event</Button>
                 </Menu.Item>
                 <Menu.Item position="right" >
                     <Button basic inverted style={{marginRight:20}} >Login</Button>
