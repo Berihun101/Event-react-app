@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import App from './componants/App';
 import 'semantic-ui-css/semantic.min.css'
 import './style.css'
+import { BrowserRouter } from 'react-router-dom';
 
 const rootEl=document.getElementById("root")
 
 function reinder(){
-    ReactDOM.render(<App />, rootEl )
+    ReactDOM.render(
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>, 
+    
+    rootEl )
 }
 
 if(module.hot){
